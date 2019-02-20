@@ -96,7 +96,7 @@ class PersonDetector(object):
         if count > 0:
             print('Count: {}'.format(count))
             elapsed = time.time() - self.last_upload
-            if elapsed > 60:
+            if elapsed > 10:
                 cv2.imwrite('hello.jpg', frame)
                 upload()
                 self.last_upload = time.time()
